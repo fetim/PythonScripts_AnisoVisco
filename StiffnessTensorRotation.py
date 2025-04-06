@@ -11,8 +11,8 @@ omega = 0 #z-axis rotation
 phi = 0 #z-axis rotation
 
 # Rotation about z-axis
-Rz11, Rz12,Rz13 = cos(omega) ,sin(omega) , 0
-Rz21, Rz22,Rz23 = -sin(omega),cos(omega), 0
+Rz11, Rz12,Rz13 = cos(omega) ,-sin(omega) , 0
+Rz21, Rz22,Rz23 = sin(omega),cos(omega), 0
 Rz31, Rz32,Rz33 = 0, 0, 1
 Rz = Matrix([[Rz11, Rz12, Rz13], [Rz21, Rz22, Rz23], [Rz31, Rz32, Rz33]])
 
@@ -27,8 +27,8 @@ Ry = Matrix([[Ry11, Ry12, Ry13], [Ry21, Ry22, Ry23], [Ry31, Ry32, Ry33]])
 # print(latex(Ry))
 
 # Rotation about modified z-axis 
-Rzz11, Rzz12,Rzz13 = cos(phi), sin(phi), 0
-Rzz21, Rzz22,Rzz23 = -sin(phi), cos(phi), 0
+Rzz11, Rzz12,Rzz13 = cos(phi), -sin(phi), 0
+Rzz21, Rzz22,Rzz23 = sin(phi), cos(phi), 0
 Rzz31, Rzz32,Rzz33 = 0, 0, 1
 Rzz = Matrix([[Rzz11, Rzz12, Rzz13], [Rzz21, Rzz22, Rzz23], [Rzz31, Rzz32, Rzz33]])
 

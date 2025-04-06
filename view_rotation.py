@@ -41,21 +41,21 @@ ax.set_title('3D Scatter Plot')
 ax.set_xlim(xmin=-1.0, xmax=1.0)
 ax.set_ylim(ymin=-1.0, ymax=1.0)
 ax.set_zlim(zmin=-1.0, zmax=1.0)
-ax.view_init(elev=30, azim=-45  )  # adjust these values as you like
+ax.view_init(elev=90, azim=-90  )  # adjust these values as you like
 
 
-omega = 30 *np.pi/180  # rotation angle in radians
-chi = 30 *np.pi/180  # rotation angle in radians
-phi = 0 *np.pi/180  # rotation angle in radians
+omega = 0 *np.pi/180  # rotation angle in radians
+chi = 0*np.pi/180  # rotation angle in radians
+phi = 45*np.pi/180  # rotation angle in radians
 
 # Create rotation matrices for each axis
 rotation_z = np.array([[np.cos(omega), -np.sin(omega), 0],
                        [np.sin(omega), np.cos(omega), 0],
                        [0, 0, 1]])
 
-rotation_y = np.array([[np.cos(chi), 0, np.sin(chi)],
+rotation_y = np.array([[np.cos(chi), 0, -np.sin(chi)],
                        [0, 1, 0],
-                       [-np.sin(chi), 0, np.cos(chi)]])
+                       [np.sin(chi), 0, np.cos(chi)]])
 
 rotation_z2 = np.array([[np.cos(phi), -np.sin(phi), 0],
                         [np.sin(phi), np.cos(phi), 0],
